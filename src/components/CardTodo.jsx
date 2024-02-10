@@ -1,5 +1,7 @@
+// @packages
 import { Edit, Trash, CheckSquare } from "feather-icons-react";
 import { useState } from "react";
+import { PropTypes } from "prop-types";
 
 const CardTodo = ({
   todo,
@@ -66,3 +68,12 @@ const CardTodo = ({
 };
 
 export default CardTodo;
+
+CardTodo.propTypes = {
+  todo: PropTypes.object.isRequired,
+  index: PropTypes.number,
+  handleRemove: PropTypes.func,
+  handleCompleted: PropTypes.func,
+  setSingleTodo: PropTypes.func,
+  setModeUpdate: PropTypes.func,
+};

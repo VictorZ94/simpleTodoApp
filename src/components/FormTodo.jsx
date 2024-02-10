@@ -1,3 +1,5 @@
+import { PropTypes } from "prop-types";
+
 const FormTodo = ({
   singleTodo,
   handleTodo,
@@ -58,3 +60,11 @@ const FormTodo = ({
 };
 
 export default FormTodo;
+
+FormTodo.propTypes = {
+  singleTodo: PropTypes.object.isRequired,
+  handleTodo: PropTypes.func,
+  handleSubmit: PropTypes.func,
+  modeUpdate: PropTypes.bool,
+  handleUpdate: PropTypes.func,
+};
