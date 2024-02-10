@@ -32,7 +32,13 @@ function App() {
   const handleSubmit = (e) => {
     e.preventDefault();
     localStorage.setItem("todos", JSON.stringify([...todos, singleTodo]));
-    setTodos([...todos, { ...singleTodo, id: todos.length + 1 }]);
+    setTodos([
+      ...todos,
+      {
+        ...singleTodo,
+        id: todos.length + 1,
+      },
+    ]);
     setSingleTodo(initialValues);
   };
 
